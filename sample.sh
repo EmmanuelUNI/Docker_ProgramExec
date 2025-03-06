@@ -2,7 +2,7 @@
 echo "Testing changes"
 read -p "Enter the name of the file, include its extension: " filename
 extension="${filename##*.}"
-if[! -f "samples/$filename"]; then
+if [! -f "samples/$filename"]; then
     echo "The file does not exist."
     exit 1
 fi
