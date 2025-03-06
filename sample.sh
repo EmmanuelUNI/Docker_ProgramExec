@@ -2,7 +2,7 @@
 echo "Testing changes"
 read -p "Enter the name of the file, include its extension: " filename
 extension="${filename##*.}"
-if [! -f "samples/$filename"]; then
+if [ ! -f "samples/$filename"]; then
     echo "The file does not exist."
     exit 1
 fi
@@ -20,17 +20,17 @@ case "$extension" in
         ;;
     java)
         cp "samples/$filename" "javaf/sample.java"
-        docker build -t "java_sample" "java"
+        docker build -t "java_sample" "javaf"
         docker run --rm "java_sample"
         ;;
     cpp)
         cp "samples/$filename" "c++/sample.cpp"
-        docker build -t "cpp_sample" "cpp"
+        docker build -t "cpp_sample" "c++"
         docker run --rm "cpp_sample"
         ;;
     js)
         cp "samples/$filename" "JavaScript/sample.js"
-        docker build -t "js_sample" "js"
+        docker build -t "js_sample" "JavaScript"
         docker run --rm "js_sample"
         ;;
     *)
