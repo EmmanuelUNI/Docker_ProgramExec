@@ -1,6 +1,6 @@
 Instructions:
 
-clone the repo in play with docker : git clone https://github.com/JuanDT24/ProgramExec.git
+clone the repo in play with docker : git clone https://github.com/EmmanuelUNI/Docker_ProgramExec.git
 
 cd ProgramExec
 
