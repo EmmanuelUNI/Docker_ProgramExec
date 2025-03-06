@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  benchmark:
+    build: .
+    image: sample-runner
+    container_name: sample-runner
+    volumes:
+      - .:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+    working_dir: /app
+    command: sh ./script.sh
