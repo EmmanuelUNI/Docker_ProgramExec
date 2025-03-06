@@ -6,7 +6,7 @@ This project provides a way to automatically detect the programming language of 
 ## Supported Languages
 - Python (`.py`)
 - Java (`.java`)
-- C++ (`.cpp` or `.cc`)
+- C++ (`.cpp`)
 - JavaScript (`.js`)
 - Ruby (`.rb`)
 
