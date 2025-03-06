@@ -3,7 +3,7 @@ def nth_fibonacci(n):
         return n
     return nth_fibonacci(n - 1) + nth_fibonacci(n - 2)
 
-n = 100
+n = 40
 
 result = nth_fibonacci(n)
 
