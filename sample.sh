@@ -1,19 +1,22 @@
 #!/bin/bash
 echo "Testing changes"
+##Checking if the name of the file is correct
 read -p "Enter the name of the file, include its extension: " filename
 extension="${filename##*.}"
-if [ ! -f "samples/$filename"]; then
+if [ ! -f "samples/$filename" ]; then
     echo "The file does not exist."
     exit 1
 fi
-
+## "switch" statement to check the extension of the file
 case "$extension" in
     py)
+    #If the extension is.py, the file is copied to the python folder, the image is built and the container is run
         cp "samples/$filename" "python/sample.py"
         docker build -t "python_sample" "python"
         docker run --rm "python_sample"
         ;;
     rb)
+    ## Same proccess but with ruby and rest of the languages
         cp "samples/$filename" "ruby/sample.rb"
         docker build -t "ruby_sample" "ruby"
         docker run --rm "ruby_sample"
@@ -34,6 +37,7 @@ case "$extension" in
         docker run --rm "js_sample"
         ;;
     *)
+    ## If the extension doesn't match any of the 5 supported languages, the script will exit
         echo "The file extension is not supported."
         ;;
 esac
