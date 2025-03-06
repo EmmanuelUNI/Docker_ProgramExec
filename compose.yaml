@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  benchmark:
+  sample:
     build: .
     image: sample-runner
     container_name: sample-runner
@@ -9,4 +9,6 @@ services:
       - .:/app
       - /var/run/docker.sock:/var/run/docker.sock
     working_dir: /app
+    stdin_open: true
+    tty: true
     command: sh ./sample.sh

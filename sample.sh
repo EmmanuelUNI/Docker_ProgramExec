@@ -1,8 +1,8 @@
 #!/bin/bash
-
+echo "Testing changes"
 read -p "Enter the name of the file, include its extension: " filename
 extension="${filename##*.}"
-for lang in py rb java cpp js:
+for lang in py rb java cpp js; do
 if [ "$extension" = "$lang" -a "$lang" = "py" ]; then
     docker build -t "python_sample" "python"
     docker run  --rm "python_sample" 
