@@ -1,5 +1,10 @@
 # Docker_ProgramExec
 
+## Contributors
+- [Emmanuel David Monterrosa Duran](https://github.com/EmmanuelUNI)
+- [Juan David Tirado Barrios](https://github.com/JuanDT24)
+
+  
 ## Description
 This project provides a way to automatically detect the programming language of a given source file, execute it inside a Docker container, and measure its execution time in milliseconds.
 
