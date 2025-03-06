@@ -2,7 +2,7 @@ Instructions:
 
 clone the repo in play with docker : git clone https://github.com/EmmanuelUNI/Docker_ProgramExec.git
 
-cd ProgramExec
+cd Docker_ProgramExec
 
 docker compose run --rm -it sample
 
