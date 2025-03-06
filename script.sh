@@ -27,4 +27,3 @@ else
     echo "The file extension is not supported."
 fi    
 done
-end
